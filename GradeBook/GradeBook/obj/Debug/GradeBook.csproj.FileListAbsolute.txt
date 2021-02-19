@@ -1,0 +1,12 @@
+c:\users\safdh\documents\visual studio 2012\Projects\GradeBook\GradeBook\bin\Debug\GradeBook.exe.config
+c:\users\safdh\documents\visual studio 2012\Projects\GradeBook\GradeBook\bin\Debug\GradeBook.exe
+c:\users\safdh\documents\visual studio 2012\Projects\GradeBook\GradeBook\bin\Debug\GradeBook.pdb
+c:\users\safdh\documents\visual studio 2012\Projects\GradeBook\GradeBook\obj\Debug\GradeBook.csprojResolveAssemblyReference.cache
+c:\users\safdh\documents\visual studio 2012\Projects\GradeBook\GradeBook\obj\Debug\GradeBook.exe
+c:\users\safdh\documents\visual studio 2012\Projects\GradeBook\GradeBook\obj\Debug\GradeBook.pdb
+E:\Safdhar\documents\Visual Studio 2012\Projects\GradeBook\GradeBook\bin\Debug\GradeBook.exe.config
+E:\Safdhar\documents\Visual Studio 2012\Projects\GradeBook\GradeBook\bin\Debug\GradeBook.exe
+E:\Safdhar\documents\Visual Studio 2012\Projects\GradeBook\GradeBook\bin\Debug\GradeBook.pdb
+E:\Safdhar\documents\Visual Studio 2012\Projects\GradeBook\GradeBook\obj\Debug\GradeBook.csprojAssemblyReference.cache
+E:\Safdhar\documents\Visual Studio 2012\Projects\GradeBook\GradeBook\obj\Debug\GradeBook.exe
+E:\Safdhar\documents\Visual Studio 2012\Projects\GradeBook\GradeBook\obj\Debug\GradeBook.pdb
