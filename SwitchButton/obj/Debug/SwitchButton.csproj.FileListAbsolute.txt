@@ -1,0 +1,6 @@
+C:\Users\Saffu\source\repos\SwitchButton\SwitchButton\obj\Debug\SwitchButton.csprojAssemblyReference.cache
+C:\Users\Saffu\source\repos\SwitchButton\SwitchButton\bin\Debug\SwitchButton.exe.config
+C:\Users\Saffu\source\repos\SwitchButton\SwitchButton\bin\Debug\SwitchButton.exe
+C:\Users\Saffu\source\repos\SwitchButton\SwitchButton\bin\Debug\SwitchButton.pdb
+C:\Users\Saffu\source\repos\SwitchButton\SwitchButton\obj\Debug\SwitchButton.exe
+C:\Users\Saffu\source\repos\SwitchButton\SwitchButton\obj\Debug\SwitchButton.pdb
