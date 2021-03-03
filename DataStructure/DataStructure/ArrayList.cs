@@ -8,35 +8,45 @@ namespace DataStructure
 {
     class ArrayList
     {
-        int Capacity;
-        int[] data;
-        int Count;
-        public const int IsEmpty = 0;
-
-        public int Capacity1 { get => Capacity; set => Capacity = value; }
-        public int Count1 { get => Count; set => Count = value; }
+        private int _capacity;
+        private int[] data;
+        private int _count;
+        private bool isEmpty;
+        public int Count { get => _count; set => _count = value; }
         public ArrayList()
         {
-            Capacity1 = 2;
-            data = new int[Capacity1];
+            _capacity = 2;
+            isEmpty = true;
+            data = new int[_capacity];
         }
 
+        public  void SetArrayState()
+        {
+            if(Count==0)
+            {
+                isEmpty = true;
+            }
+            else
+            {
+                isEmpty = false;
+            }
+        }
         public void Print()
         {
-            if (Count1!=IsEmpty)
+            if (!isEmpty)
             {
                 StringBuilder sb = new StringBuilder();
                 sb.Append("[");
-                for (int i = 0; i < Count1-1; i++)
+                for (int i = 0; i < Count-1; i++)
                 {
                     sb.Append(data[i] + ",");
                 }
-                sb.Append(data[Count1-1]+"]");
+                sb.Append(data[Count-1]+"]");
                 Console.WriteLine(sb.ToString()); 
             }
             else
             {
-                Console.WriteLine("ArrayList IsEmpty"); 
+                throw new Exception("arraylist is empty");
             }
         }
 
@@ -59,16 +69,17 @@ namespace DataStructure
 
         public void Add(int value)
         {
-            if (Count1 < Capacity1)
+            if (Count < _capacity)
             {
-                data[Count1] = value;
-                Count1++;
+                data[Count] = value;
+                Count++;
             }
             else
             {
                 Resize();
                 Add(value);
             }
+            SetArrayState();
         }
 
         public int Get(int index)
