@@ -1,0 +1,6 @@
+C:\Users\Saffu\source\repos\DataStructure\DataStructure\bin\Debug\DataStructure.exe.config
+C:\Users\Saffu\source\repos\DataStructure\DataStructure\bin\Debug\DataStructure.exe
+C:\Users\Saffu\source\repos\DataStructure\DataStructure\bin\Debug\DataStructure.pdb
+C:\Users\Saffu\source\repos\DataStructure\DataStructure\obj\Debug\DataStructure.csprojAssemblyReference.cache
+C:\Users\Saffu\source\repos\DataStructure\DataStructure\obj\Debug\DataStructure.exe
+C:\Users\Saffu\source\repos\DataStructure\DataStructure\obj\Debug\DataStructure.pdb
