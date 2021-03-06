@@ -1,0 +1,5 @@
+C:\Users\Saffu\source\repos\Stack_Library4\Stack_Library4\obj\Debug\Stack_Library4.csprojAssemblyReference.cache
+C:\Users\Saffu\source\repos\Stack_Library4\Stack_Library4\bin\Debug\Stack_Library4.dll
+C:\Users\Saffu\source\repos\Stack_Library4\Stack_Library4\bin\Debug\Stack_Library4.pdb
+C:\Users\Saffu\source\repos\Stack_Library4\Stack_Library4\obj\Debug\Stack_Library4.dll
+C:\Users\Saffu\source\repos\Stack_Library4\Stack_Library4\obj\Debug\Stack_Library4.pdb
