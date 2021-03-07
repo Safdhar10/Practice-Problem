@@ -12,7 +12,6 @@ namespace ParenthesisUsingStack
         public bool BalancedParanthesis(char[] input)
         {
             int _charLength = input.Length;
-
             for (int i = 0; i < _charLength; i++)
             {
                 if (input[i] == '(')
