@@ -1,0 +1,54 @@
+﻿<Window x:Class="RootDesign.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RootDesign"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="768" Width="1024">
+    <Grid Background="AliceBlue">
+
+
+        <StackPanel Width="800" Height="600">
+            <StackPanel Orientation="Horizontal" Height="50" Width="600">
+                <Label Content="Name      :" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="90,0,0,0" FontSize="16" ></Label>
+                <TextBox x:Name="StudentName"  Width="200" Height="30" FontSize="16"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" Width="600">
+                <Label Content="Course      :" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="90,0,0,0" FontSize="16" ></Label>
+                <ComboBox x:Name="Course" Text="Select course" Width="200" Height="30" FontSize="16" SelectionChanged="Course_SelectionChanged"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" Width="600">
+                <Label Content="Batch      :" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="90,0,0,0" FontSize="16" ></Label>
+                <ComboBox x:Name="Batch" Text="Select Batch" Width="200" Height="30" FontSize="16"></ComboBox>
+                <StackPanel   Margin="40,10,0,0" PreviewMouseLeftButtonDown="StackPanel_PreviewMouseLeftButtonDown">
+                    <Ellipse x:Name="AddBatch" Height="30" Width="30" Stroke="Black" StrokeThickness="2"></Ellipse>
+                    <TextBlock Text="+" FontSize="40" Margin="2,-46,0,0"></TextBlock>
+                </StackPanel>
+                </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" Width="600">
+                <Label Content="UserName      :" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="90,0,0,0" FontSize="16" ></Label>
+                <TextBox x:Name="UserName" Text="{Binding ElementName=StudentName,Path=Text}" Width="200" Height="30" FontSize="16"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" Width="600">
+                <Label Content="Password      :" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="90,0,0,0" FontSize="16" ></Label>
+                <TextBox x:Name="Password" Text="Code123$" Width="200" Height="30" FontSize="16"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="40" Width="250" Margin="0,20,20,0">
+                <Button x:Name="Add" BorderBrush="Black" BorderThickness="2" Width="150" Content="Add" FontSize="18" Click="Add_Click" ></Button>
+            </StackPanel>
+        </StackPanel>
+            <!--<StackPanel Width="250" Height="800" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <StackPanel Width="250" Height="460" VerticalAlignment="Top"   Orientation="Horizontal">
+                    <Label Content="Name        :" Height="40" Width="100" FontSize="16" HorizontalAlignment="Center" Margin="40,0,0,0"></Label>
+                    <TextBox x:Name="StudentName" Height="40" Width="250"></TextBox>
+                </StackPanel>
+                --><!--<Label Content="Batch         :" Height="40" Width="100" FontSize="16" HorizontalAlignment="Center" Margin="40,20,0,0"></Label>
+                <Label Content="Course       :" Height="40" Width="100" FontSize="16" HorizontalAlignment="Center" Margin="40,20,0,0"></Label>
+                <Label Content="UserName  :" Height="40" Width="100" FontSize="16" HorizontalAlignment="Center" Margin="40,20,0,0"></Label>
+                <Label Content="Password    :" Height="40" Width="100" FontSize="16" HorizontalAlignment="Center" Margin="40,20,0,0"></Label>--><!--
+            </StackPanel>-->
+           
+       
+    </Grid>
+</Window>
