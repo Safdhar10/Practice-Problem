@@ -1,0 +1,14 @@
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\bin\Debug\GoldNEcklace.exe.config
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\bin\Debug\GoldNEcklace.exe
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\bin\Debug\GoldNEcklace.pdb
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\obj\Debug\GoldNEcklace.csprojAssemblyReference.cache
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\obj\Debug\MainWindow.g.cs
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\obj\Debug\App.g.cs
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\obj\Debug\GoldNEcklace_MarkupCompile.cache
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\obj\Debug\GoldNEcklace_MarkupCompile.lref
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\obj\Debug\MainWindow.baml
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\obj\Debug\GoldNEcklace.g.resources
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\obj\Debug\GoldNEcklace.Properties.Resources.resources
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\obj\Debug\GoldNEcklace.csproj.GenerateResource.cache
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\obj\Debug\GoldNEcklace.exe
+C:\Users\Saffu\source\repos\WPFPractice\GoldNEcklace\obj\Debug\GoldNEcklace.pdb

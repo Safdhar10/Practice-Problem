@@ -1,0 +1,14 @@
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\bin\Debug\WPFPractice.exe.config
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\bin\Debug\WPFPractice.exe
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\bin\Debug\WPFPractice.pdb
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\obj\Debug\WPFPractice.csprojAssemblyReference.cache
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\obj\Debug\MainWindow.g.cs
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\obj\Debug\App.g.cs
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\obj\Debug\WPFPractice_MarkupCompile.cache
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\obj\Debug\WPFPractice_MarkupCompile.lref
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\obj\Debug\MainWindow.baml
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\obj\Debug\WPFPractice.g.resources
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\obj\Debug\WPFPractice.Properties.Resources.resources
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\obj\Debug\WPFPractice.csproj.GenerateResource.cache
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\obj\Debug\WPFPractice.exe
+C:\Users\Saffu\source\repos\WPFPractice\WPFPractice\obj\Debug\WPFPractice.pdb

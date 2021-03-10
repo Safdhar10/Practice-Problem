@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFPractice", "WPFPractice\WPFPractice.csproj", "{BAEE9C2E-10C0-4B51-AC5C-E9E86037C5C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldNEcklace", "GoldNEcklace\GoldNEcklace.csproj", "{3633414F-FAA3-4FC1-A114-C1ACEFA37D41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAEE9C2E-10C0-4B51-AC5C-E9E86037C5C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAEE9C2E-10C0-4B51-AC5C-E9E86037C5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAEE9C2E-10C0-4B51-AC5C-E9E86037C5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAEE9C2E-10C0-4B51-AC5C-E9E86037C5C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3633414F-FAA3-4FC1-A114-C1ACEFA37D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3633414F-FAA3-4FC1-A114-C1ACEFA37D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3633414F-FAA3-4FC1-A114-C1ACEFA37D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3633414F-FAA3-4FC1-A114-C1ACEFA37D41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8E4EA6D-250A-4C0F-A383-F194355D83E3}
+	EndGlobalSection
+EndGlobal
