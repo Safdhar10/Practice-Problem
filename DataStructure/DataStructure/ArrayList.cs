@@ -12,13 +12,45 @@ namespace DataStructure
         private int[] data;
         private int _count;
         private bool isEmpty;
+        private bool isSorted;
         public int Count { get => _count; set => _count = value; }
-
-        public ArrayList(int _capacity = 2)
+        public ArrayList(bool isSorted = false, int _capacity = 2)
         {
             this._capacity = _capacity;
             isEmpty = true;
             data = new int[_capacity];
+            this.isSorted = isSorted;
+        }
+        public ArrayList(IEnumerable<int> Collection)
+        {
+            data = new int[_capacity];
+            AddAll(Collection);
+        }
+        public ArrayList(IEnumerable<int> Collection, int StartIndex)
+        {
+            data = new int[_capacity];
+            //for(int i=StartIndex;i<Collection.Count();i++)
+            //{
+            //    Add(Collection.ElementAt(i));
+            //}
+            int[] temp = Collection.ToArray();
+            for(int i=StartIndex;i<temp.Count();i++)
+            {
+                Add(temp[i]);
+            }
+        }
+        public ArrayList(IEnumerable<int> Collection, int StartIndex, int EndIndex)
+        {
+            data = new int[_capacity];
+            //for (int i = StartIndex; i <=EndIndex; i++)
+            //{
+            //    Add(Collection.ElementAt(i));
+            //}
+            int[] temp = Collection.ToArray();
+            for (int i = StartIndex; i <= EndIndex; i++)
+            {
+                Add(temp[i]);
+            }
         }
 
         public void SetArrayState()
@@ -53,7 +85,7 @@ namespace DataStructure
 
         public void Resize()
         {
-            _capacity *= 2;
+            _capacity += 1;
             int[] newArray = new int[_capacity];
             newArray = data;
             data = new int[_capacity];
@@ -262,41 +294,240 @@ namespace DataStructure
 
         public void InsertAll(int index,IEnumerable<int> collection)
         {
-            //foreach(var v in  collection)
-            //{
-            //    Insert(index, v);
-            //    index++;
-            //}
-            int[] array = collection.ToArray();
-            int length = array.Length;
-            if ((Count + length) > _capacity)
+            if (!isEmpty)
             {
-                int NeedSize = (Count + length) - _capacity;
-                Resize(NeedSize);
+                //foreach(var v in  collection)
+                //{
+                //    Insert(index, v);
+                //    index++;
+                //}
+                int[] array = collection.ToArray();
+                int length = array.Length;
+                if ((Count + length) > _capacity)
+                {
+                    int NeedSize = (Count + length) - _capacity;
+                    Resize(NeedSize);
+                }
+                int _TempCapacity = _capacity;
+                int _tempCount = Count;
+                int _tempIndex = index + length;
+                Count += length;
+                while (_TempCapacity > index)
+                {
+                    _TempCapacity--;
+                    _tempCount--;
+                    if (_TempCapacity >= _tempIndex)
+                    {
+                        data[_TempCapacity] = data[_tempCount];
+                    }
+                    else
+                    {
+                        data[_TempCapacity] = array[length - 1];
+                        length--;
+                    }
+                }
             }
-            int _TempCapacity = _capacity;
-            int _tempCount = Count;
-            int _tempIndex = index + length;
-            Count += length;
-            while (_TempCapacity > index)
+            else
             {
-                _TempCapacity--;
-                _tempCount--;
-                if (_TempCapacity >= _tempIndex)
-                {
-                    data[_TempCapacity] = data[_tempCount];
-                }
-                else
-                {
-                    data[_TempCapacity] = array[length - 1];
-                    length--;
-                }
+                AddAll(collection);
             }
             SetArrayState();
+        }
+
+        public int Max()
+        {
+            if(!isEmpty)
+            {
+                int max = data[Count - 1];
+                if (!isSorted)
+                {
+                    foreach (var tempMax in data)
+                    {
+                        if (tempMax > max)
+                        {
+                            max = tempMax;
+                        }
+                    }
+                }
+                return max;
+            }
+            else
+            {
+                throw new Exception("arraylist is empty");
+            }
 
         }
 
+        public int Min()
+        {
+            if(!isEmpty)
+            {
+                int min = data[0];
+                if (!isSorted)
+                {
+                    foreach (var tempMin in data)
+                    {
+                        if (tempMin < min)
+                        {
+                            min = tempMin;
+                        }
+                    }
+                }
+                return min;
+            }
+            else
+            {
+                throw new Exception("arraylist is empty");
+            }
+        }
 
+        public int Sum()
+        {
+            if(!isEmpty)
+            {
+                int sum = 0;
+                foreach (var item in data)
+                {
+                    sum += item;
+                }
+                return sum;
+            }
+            else
+            {
+                throw new Exception("arraylist is empty");
+            }
+        }
+
+        public ArrayList Reverse()
+        {
+            if(!isEmpty)
+            {
+                ArrayList newAl = new ArrayList();
+                int i = Count - 1;
+                while (i >= 0)
+                {
+                    newAl.Add(data[i]);
+                    i--;
+                }
+                return newAl;
+            }
+            else
+            {
+                throw new Exception("arraylist is empty");
+            }
+        }
+
+        public int[] Toarray()
+        {
+            if(!isEmpty)
+            {
+                int[] tempArray = new int[Count];
+                for (int i = 0; i < Count; i++)
+                {
+                    tempArray[i] = Get(i);
+                }
+                return tempArray;
+            }
+            else
+            {
+                throw new Exception("arraylist is empty");
+            }
+        }
+
+        public int[] Toarray(int StartIndex)
+        {
+            if(!isEmpty)
+            {
+                int size = Count - StartIndex;
+                int[] tempArray = new int[size];
+                for (int i = 0; i < size; i++)
+                {
+                    tempArray[i] = Get(StartIndex);
+                    StartIndex++;
+                }
+                return tempArray;
+
+            }
+            else
+            {
+                throw new Exception("arraylist is empty");
+            }
+        }
+
+        public int[] Toarray(int StartIndex, int EndIndex)
+        {
+            if(!isEmpty)
+            { 
+                int size = EndIndex;
+                int[] tempArray = new int[size];
+                for (int i = 0; i < size; i++)
+                {
+                    tempArray[i] = Get(StartIndex);
+                    StartIndex++;
+                }
+                return tempArray;
+            }
+            else
+            {
+                throw new Exception("arraylist is empty");
+            }
+        }
+
+        public void Clear()
+        {
+            ArrayList obj = new ArrayList();
+            data = new int[obj._capacity];
+            Count = 0;
+            SetArrayState();
+        }
+
+        public ArrayList Sort(bool inDescendingOrder=false)
+        {
+            ArrayList Al = new ArrayList();
+            Al.data = data;
+            if(!isEmpty)
+            {
+                if(!inDescendingOrder)
+                {
+                    for (int i = 0; i < Count - 1; i++)
+                    {
+                        for (int j = i + 1; j < Count; j++)
+                        {
+                            if (Al.data[i] > Al.data[j])
+                            {
+                                int temp = Al.data[j];
+                                Al.data[j] = Al.data[i];
+                                Al.data[i] = temp;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < Count - 1; i++)
+                    {
+                        for (int j = i + 1; j < Count; j++)
+                        {
+                            if (Al.data[i] < Al.data[j])
+                            {
+                                int temp = Al.data[j];
+                                Al.data[j] = Al.data[i];
+                                Al.data[i] = temp;
+                            }
+                        }
+                    }
+
+                }
+                return Al;
+
+            }
+            else
+            {
+                throw new Exception("arraylist is empty");
+
+            }
+            
+        }
 
 
     }
