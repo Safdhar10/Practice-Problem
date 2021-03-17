@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Stack_Library4
 {
-    class Dstack
+    class Dstack<type>
     {
         private int _count;
         private int _capacity;
         private bool _isEmpty;
-        private int[] data;
+        private type[] data;
 
         public int Count
         {
@@ -19,24 +19,12 @@ namespace Stack_Library4
             {
                 return _count;
             }
-            set
-            {
-                _count = value;
-            }
         }
         public bool IsEmpty
         {
             get
             {
-                if (Count == 0)
-                {
-                    _isEmpty = true;
-                }
-                else
-                {
-                    _isEmpty = false;
-                }
-                return _isEmpty;
+                return Count==0;
             }
         }
 
@@ -46,36 +34,32 @@ namespace Stack_Library4
             {
                 return _capacity;
             }
-            set
-            {
-                _capacity = value;
-            }
         }
 
         public Dstack(int capacity)
         {
-            this.Capacity = capacity;
-            Count = 0;
-            data = new int[Capacity];
+            this._capacity = capacity;
+            _count = 0;
+            data = new type[Capacity];
         }
 
 
         public void Resize()
         {
-            Capacity = Capacity * 2;
-            int[] NewArray = new int[Capacity];
+            _capacity = Capacity * 2;
+            type[] NewArray = new type[_capacity];
             NewArray = data;
-            data = new int[Capacity];
+            data = new type[_capacity];
             Array.Copy(NewArray, data, NewArray.Length);
         }
 
 
-        public void push(int value)
+        public void push(type value)
         {
-            if (Count != Capacity)
+            if (Count < Capacity)
             {
                 data[Count] = value;
-                Count++;
+                _count++;
             }
             else
             {
@@ -84,11 +68,11 @@ namespace Stack_Library4
             }
         }
 
-        public int pop()
+        public type pop()
         {
             if (!IsEmpty)
             {
-                return data[--Count];
+                return data[--_count];
             }
             else
             {
@@ -96,11 +80,11 @@ namespace Stack_Library4
             }
         }
 
-        public int peek()
+        public type peek()
         {
             if (!IsEmpty)
             {
-                return data[Count - 1];
+                return data[_count - 1];
 
             }
             else
