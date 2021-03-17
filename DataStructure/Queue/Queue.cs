@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Quest_DataStructure
 {
-    public class Queue
+    public class Queue<T>
     {
-        private int[] _data;
+        private T[] _data;
         private int _count;
         private int _capacity;
         private bool _isEmpty;
@@ -45,13 +45,12 @@ namespace Quest_DataStructure
         public Queue(int Capacity)
         {
             this._capacity = Capacity;
-            _data = new int[Capacity];
+            _data = new T[Capacity];
             _count = 0;
-            _isEmpty = true;
             _tail = -1;
             _head = -1;
         }
-        public void EnQueue(int value)
+        public void EnQueue(T value)
         {
             if (_count < _capacity)
             {
@@ -68,35 +67,27 @@ namespace Quest_DataStructure
             }
             else
             {
-                throw new OverflowException("Queue is Full");
+                Resize();
+                EnQueue(value);
             }
         }
-        public int DeQueue()
+        public T DeQueue()
         {
             if(!IsEmpty)
             {
-                if(_count>0)
-                {
                     if(_head==(_capacity))
                     {
                         _head = 0;
-                        _count++;
                     }
                     _count--;
                     return _data[_head++];
-                }
-                else
-                {
-                    throw new InvalidOperationException("Queue is empty");
-                }
-                
             }
             else
             {
                 throw new InvalidOperationException("Queue is empty");
             }
         }
-        public int Peek()
+        public T Peek()
         {
             if(!IsEmpty)
             {
@@ -127,6 +118,38 @@ namespace Quest_DataStructure
                     }
                 }
                 return sb.ToString();
+            }
+            else
+            {
+                throw new InvalidOperationException("Queue is empty");
+            }
+        }
+        public void Clear()
+        {
+            _data = new T[_capacity];
+            _count = 0;
+            _tail = -1;
+            _head = -1;
+        }
+        public void Resize()
+        {
+            if(!IsEmpty)
+            {
+                T[] NewArray = new T[_capacity*=2];
+                int _h = _head;
+                int _t = 0;
+                for(int i=0;i<_count;i++)
+                {
+                    if(_h<_count)
+                    {
+                        NewArray[i] = _data[_h];
+                    }
+                    else
+                    {
+                        NewArray[i] = _data[_t];
+                    }
+                }
+                _data = NewArray;
             }
             else
             {
