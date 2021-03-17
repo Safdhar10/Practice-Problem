@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Stack_Library4
 {
-    public class Stack
+    public class Stack<type>
     {
         private int _count;
         private int _capacity;
         private bool _isEmpty;
-        private int[] _data;
+        private type[] _data;
 
         public int Count
         {
@@ -19,53 +19,34 @@ namespace Stack_Library4
             {
                 return _count;
             }
-            set
-            {
-                _count = value;
-            }
         }
         public bool IsEmpty
         {
             get
             {
-                if (Count == 0)
-                {
-                    _isEmpty = true;
-                }
-                else
-                {
-                    _isEmpty = false;
-                }
-                return _isEmpty;
+                return Count==0;
             }
         }
-
         public int Capacity
         {
             get
             {
                 return _capacity;
             }
-            set
-            {
-                _capacity = value;
-            }
         }
 
         public Stack(int capacity)
         {
-            this.Capacity = capacity;
-            Count = 0;
-            _data = new int[Capacity];
+            this._capacity = capacity;
+            _count= 0;
+            _data = new type[Capacity];
         }
 
-
-
-        public void push(int value)
+        public void Push(type value)
         {
-            if (Count != Capacity)
+            if (Count < Capacity)
             {
-                _data[Count++] = value;
+                _data[_count++] = value;
             }
             else
             {
@@ -73,11 +54,11 @@ namespace Stack_Library4
             }
         }
 
-        public int pop()
+        public type Pop()
         {
             if (!IsEmpty)
             {
-                return _data[--Count];
+                return _data[--_count];
             }
             else
             {
@@ -85,11 +66,11 @@ namespace Stack_Library4
             }
         }
 
-        public int peek()
+        public type Peek()
         {
             if (!IsEmpty)
             {
-                return _data[Count - 1];
+                return _data[_count - 1];
             }
             else
             {
@@ -99,12 +80,24 @@ namespace Stack_Library4
 
         public string Print()
         {
-            string re = "";
-            for (int i = Count - 1; i >= 0; i--)
+            if(!IsEmpty)
             {
-                re = re + _data[i] + " ";
+                return this.ToString();
             }
-            return re;
+            else
+            {
+                throw new InvalidOperationException("The Stack is Empty.");
+            }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder re = new StringBuilder();
+            for (int i = _count - 1; i >= 0; i--)
+            {
+                re.Append(_data[i] + " ");
+            }
+            return re.ToString();
         }
     }
 }
