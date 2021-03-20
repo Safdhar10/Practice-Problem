@@ -1,118 +1,138 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Quest_DataStructure
+﻿private T[] _data;
+private int _count;
+private int _capacity;
+private bool _isEmpty;
+public int Count
 {
-    class DeqQueue<T>
+    get
     {
-        private T[] _data;
-        private int _count;
-        private int _capacity;
-        private bool _isEmpty;
-        public int Count
+        return _count;
+    }
+}
+public int Capacity
+{
+    get
+    {
+        return _capacity;
+    }
+}
+public bool IsEmpty
+{
+    get
+    {
+        if (Count == 0)
         {
-            get
-            {
-                return _count;
-            }
+            return true;
         }
-        public int Capacity
+        else
         {
-            get
-            {
-                return _capacity;
-            }
+            return false;
         }
-        public bool IsEmpty
+    }
+}
+private int _first;
+private int _last;
+public DeqQueue(int Capacity)
+{
+    this._capacity = Capacity;
+    _data = new T[Capacity];
+    _count = 0;
+    _first = -1;
+    _last = -1;
+}
+
+public void InsertFirst(T value)
+{
+    if (_count == 0)
+    {
+        _last = 0;
+    }
+    if (_count < _capacity)
+    {
+        _data[++_first] = value;
+        if (_first == _capacity - 1)
         {
-            get
-            {
-                if (Count == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
+            _first = 0;
         }
-        private int _tail;
-        private int _head;
-        public DeqQueue(int Capacity)
+        _count++;
+    }
+    else
+    {
+        throw new OverflowException("Deque is Full");
+    }
+}
+public void InsertLast(T value)
+{
+    if (_count == 0)
+    {
+        _first = 0;
+    }
+    if (_count < _capacity)
+    {
+        if (_last == 0)
         {
-            this._capacity = Capacity;
-            _data = new T[Capacity];
-            _count = 0;
-            _tail = -1;
-            _head = 0;
+            _last = _data.Length;
         }
-        public void Enqueue(T value)
+        _data[--_last] = value;
+        _count++;
+
+    }
+    else
+    {
+        throw new OverflowException("Deque is Full");
+    }
+}
+public T RemoveFirst()
+{
+    if (!IsEmpty)
+    {
+        if (_first == -1)
         {
-            if(_count<_capacity)
-            {
-                if(_tail==(_capacity-1))
-                {
-                    _tail = -1;
-                }
-                _data[++_tail] = value;
-                _count++;
-            }
-            else
-            {
-                throw new InvalidOperationException("DeqQueue is full");
-            }
+            _first = _capacity - 1;
         }
-        public void Push(T value)
+        _count--;
+        return _data[_first--];
+    }
+    else
+    {
+        throw new InvalidOperationException("Deque is Empty");
+    }
+}
+public T RemoveLast()
+{
+    if (!IsEmpty)
+    {
+        if (_last == _capacity)
         {
-            if (_count < _capacity)
-            {
-                if (_tail == (_capacity - 1))
-                {
-                    _tail = -1;
-                }
-                _data[++_tail] = value;
-                _count++;
-            }
-            else
-            {
-                throw new InvalidOperationException("DeqQueue is full");
-            }
+            _last = 0;
         }
-        public void Dequeue()
-        {
-            if (!IsEmpty)
-            {
-                if (_head == (_capacity))
-                {
-                    _head = 0;
-                }
-                _count--;
-                _head++;
-            }
-            else
-            {
-                throw new InvalidOperationException("Queue is empty");
-            }
-        }
-        public void Pop()
-        {
-            if (!IsEmpty)
-            {
-                if (_tail == 0)
-                {
-                    _tail = _capacity-1;
-                }
-                _count--;
-                _tail--;
-            }
-            else
-            {
-                throw new InvalidOperationException("Queue is empty");
-            }
-        }
+        _count--;
+        return _data[_last++];
+    }
+    else
+    {
+        throw new InvalidOperationException("Deque is Empty");
+    }
+}
+public T GetFirst()
+{
+    if (!IsEmpty)
+    {
+        return _data[_first];
+    }
+    else
+    {
+        throw new InvalidOperationException("Deque is Empty");
+    }
+}
+public T GetLast()
+{
+    if (!IsEmpty)
+    {
+        return _data[_last];
+    }
+    else
+    {
+        throw new InvalidOperationException("Deque is Empty");
     }
 }
