@@ -73,8 +73,7 @@ namespace Sudoku
                 Console.WriteLine("NoT Correct");
             }
         }
-
-        public void PringGrid()
+        public void AllGrid()
         {
             int count = 0;
             Console.WriteLine(" " + "------" + " " + "-------" + " " + "------" + " " + "\t");
@@ -91,9 +90,140 @@ namespace Sudoku
                     Console.WriteLine(" " + "------" + " " + "-------" + " " + "------" + " " + "\t");
                     Console.WriteLine();
                     count = 0;
-                    Console.WriteLine(" " + "------" + " " + "-------" + " " + "------" + " " + "\t");
                 }
             }
+        }
+        private void PrintSubGrid(int row,int column)
+        {
+            for(int i=row;i<row+3;i++)
+            {
+                Console.Write("|" + SudokuBoard[i, 0] + " " + SudokuBoard[i, 1] + " " + SudokuBoard[i, 2] + "|" + "\t");
+                Console.WriteLine();
+            }
+        }
+        public string FindFirstElementofSubGrid(int row,int column)
+        {
+            int _choice = GridNumber(row, column);
+            if(_choice==1)
+            {
+                return "0,0";
+            }
+            else if (_choice == 2)
+            {
+                return "0, 3";
+            }
+            else if (_choice == 3)
+            {
+                return"0, 6";
+            }
+            else if (_choice == 4)
+            {
+                return "3, 0";
+            }
+            else if (_choice == 5)
+            {
+                return"3, 3";
+            }
+            else if (_choice == 6)
+            {
+                return "3, 6";
+            }
+            else if (_choice == 7)
+            {
+                return "6, 0";
+            }
+            else if (_choice == 8)
+            {
+                return "6, 3";
+            }
+            else
+            {
+                return "6, 6";
+            }
+        }
+        public void Subgrid(int row,int column)
+        {
+            int _choice = GridNumber(row, column);
+            if (_choice == 1)
+            {
+                PrintSubGrid(0, 0);
+            }
+            else if (_choice == 2)
+            {
+                PrintSubGrid(0, 3);
+            }
+            else if (_choice == 3)
+            {
+                PrintSubGrid(0, 6);
+            }
+            else if (_choice == 4)
+            {
+                PrintSubGrid(3, 0);
+            }
+            else if (_choice == 5)
+            {
+                PrintSubGrid(3, 3);
+            }
+            else if (_choice == 6)
+            {
+                PrintSubGrid(3, 6);
+            }
+            else if (_choice == 7)
+            {
+                PrintSubGrid(6, 0);
+            }
+            else if (_choice == 8)
+            {
+                PrintSubGrid(6, 3);
+            }
+            else if (_choice == 9)
+            {
+                PrintSubGrid(6, 6);
+            }
+        }
+        private int GridNumber(int i,int j)
+        {
+            if((i >= 0 && i <= 2) && (j >= 0 && j <= 2))
+            {
+                return 1;
+            }
+            else if((i >= 0 && i <= 2) && (j >= 3 && j <= 5))
+            {
+                return 2;
+            }
+            else if((i >= 0 && i <= 2) && (j >= 6 && j <= 8))
+            {
+                return 3;
+            }
+            else if((i >= 3 && i <= 5) && (j >= 0 && j <= 2))
+            {
+                return 4;
+            }
+            else if((i >= 3 && i <= 5) && (j >= 3 && j <= 5))
+            {
+                return 5;
+            }
+            else if((i >= 3 && i <= 5) && (j >= 6 && j <= 8))
+            {
+                return 6;
+            }
+            else if ((i >= 6 && i <= 8) && (j >= 0 && j <= 2))
+            {
+                return 7;
+            }
+            else if ((i >= 6 && i <= 8) && (j >= 3 && j <= 5))
+            {
+                return 8;
+            }
+            else if ((i >= 6 && i <= 8) && (j >= 6 && j <= 8))
+            {
+                return 9;
+            }
+            else
+            {
+                return 0;
+            }
+
         }
 
     }

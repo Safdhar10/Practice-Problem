@@ -13,7 +13,7 @@ namespace Sudoku
         {
             Sudoku sd = new Sudoku("input1.txt");
             //  sd.SudukoIsValid();
-            sd.PringGrid();
+            Console.WriteLine(sd.FindFirstElementofSubGrid(3,5));
         }
     }
 }
