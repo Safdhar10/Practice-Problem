@@ -10,26 +10,26 @@ namespace StringToInteger
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(WhiteSpace(" "));
+            Console.WriteLine(WhiteSpace("    1-12 2"));
         }
         public static int WhiteSpace(string Number)
         {
-            bool _digitCame = false;
             int _answer = 0;
             int _minusCount = 0;
-            if (Number == "2147483648" || Number.Equals("-2147483648"))
-            {
-                throw new ArithmeticException("Integer overflow has occurred");
-            }
+            int _rangeCount = 0;
             for (int i = 0; i < Number.Length; i++)
             {
                 if ((Number[i] >= 48 && Number[i] <= 57))
                 {
                     int _digitValue = Number[i] - 48;
                     _answer = (_answer * 10) + _digitValue;
-                    _digitCame = true;
+                    _rangeCount++;
+                    if(_rangeCount>10)
+                    {
+                        throw new ArithmeticException("Integer overflow has occurred");
+                    }
                 }
-                else if(!_digitCame && Number[i]=='-')
+                else if (_rangeCount==0 && Number[i] == '-')
                 {
                     if (_minusCount < 1)
                         _minusCount++;
@@ -37,7 +37,7 @@ namespace StringToInteger
                         throw new FormatException("Input string is not in the right format");
 
                 }
-                else if(_digitCame)
+                else if (_rangeCount>0)
                 {
                     if (Number[i] == '-')
                         throw new FormatException("Input string is not in the right format");
@@ -45,8 +45,14 @@ namespace StringToInteger
                         break;
                 }
             }
-            _answer= _minusCount == 1 ? (_answer * -1) : _answer;
-            return _digitCame?_answer:throw new FormatException("Input string is not in the right format");
+            _answer = _minusCount == 1 ? (_answer * -1) : _answer;
+
+            if (_minusCount == 0 && _answer < 0)
+                throw new ArithmeticException("Integer overflow has occurred");
+            else if (_minusCount == 1 && _answer > 0)
+                throw new ArithmeticException("Integer overflow has occurred");
+
+            return _rangeCount>0?_answer:throw new FormatException("Input string is not in the right format");
         }
 
 
