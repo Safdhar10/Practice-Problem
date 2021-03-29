@@ -93,7 +93,7 @@ namespace Sudoku
                 }
             }
         }
-        private void PrintSubGrid(int row,int column)
+        public void PrintSubGrid(int row,int column)
         {
             for(int i=row;i<row+3;i++)
             {

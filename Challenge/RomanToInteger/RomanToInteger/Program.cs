@@ -11,7 +11,7 @@ namespace RomanToInteger
         static void Main(string[] args)
         {
             RomanToInt RI = new RomanToInt();
-            Console.WriteLine(RI.ConvertToInt("MMMCMXCIX"));
+            Console.WriteLine(RI.ConvertToInt("MCMXCIV"));
         }
     }
 }

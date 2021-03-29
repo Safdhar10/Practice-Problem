@@ -12,8 +12,12 @@ namespace Sudoku
         static void Main(string[] args)
         {
             Sudoku sd = new Sudoku("input1.txt");
-            //  sd.SudukoIsValid();
+            sd.AllGrid();
+            sd.SudukoIsValid();
             Console.WriteLine(sd.FindFirstElementofSubGrid(3,5));
+            sd.Subgrid(4,0);
+            sd.PrintSubGrid(3, 0);
+            
         }
     }
 }
