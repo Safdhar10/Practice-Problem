@@ -8,6 +8,17 @@ namespace RomanToInteger
 {
     class RomanToInt
     {
+        Dictionary<char, int> GetRomanValue = new Dictionary<char, int>();
+        public RomanToInt()
+        {
+            GetRomanValue.Add('I', 1);
+            GetRomanValue.Add('V', 5);
+            GetRomanValue.Add('X', 10);
+            GetRomanValue.Add('L', 50);
+            GetRomanValue.Add('C', 100);
+            GetRomanValue.Add('D', 500);
+            GetRomanValue.Add('M', 1000);
+        }
         public int ConvertToInt(string RomanLetters)
         {
             int _length = RomanLetters.Length;
@@ -15,7 +26,8 @@ namespace RomanToInteger
             int _previousCharValue = 0;
             while(_length-->0)
             {
-                int _charValue = GetRomanValue(RomanLetters[_length]);
+               
+                int _charValue = GetRomanValue[RomanLetters[_length]];
                 if(_previousCharValue<=_charValue)
                 {
                     _answer += _charValue;
@@ -29,36 +41,6 @@ namespace RomanToInteger
             return _answer;
         }
 
-        public int GetRomanValue(char RomanChar)
-        {
-            if(RomanChar=='I')
-            {
-                return 1;
-            }
-            else if(RomanChar=='V')
-            {
-                return 5;
-            }
-            else if(RomanChar=='X')
-            {
-                return 10;
-            }
-            else if(RomanChar=='L')
-            {
-                return 50;
-            }
-            else if(RomanChar=='C')
-            {
-                return 100;
-            }
-            else if(RomanChar=='D')
-            {
-                return 500;
-            }
-            else
-            {
-                return 1000;
-            }
-        }
+        
     }
 }
