@@ -10,8 +10,8 @@ namespace RomanToInteger
     {
         static void Main(string[] args)
         {
-            RomanToInt ri = new RomanToInt();
-            Console.WriteLine(ri.ConvertToInt("MMMCMXCIX"));
+            RomanToInt RI = new RomanToInt();
+            Console.WriteLine(RI.ConvertToInt("MMMCMXCIX"));
         }
     }
 }
