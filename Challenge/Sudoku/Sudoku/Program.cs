@@ -17,7 +17,6 @@ namespace Sudoku
             Console.WriteLine(sd.FindFirstElementofSubGrid(3,5));
             sd.Subgrid(4,0);
             sd.PrintSubGrid(3, 0);
-            
         }
     }
 }
