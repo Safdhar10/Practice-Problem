@@ -10,13 +10,15 @@ namespace StringToInteger
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(WhiteSpace("    1-12 2"));
+            Console.WriteLine(WhiteSpace("++12345"));
+            //Console.WriteLine(int.Parse("123.32"));
         }
         public static int WhiteSpace(string Number)
         {
             int _answer = 0;
             int _minusCount = 0;
             int _rangeCount = 0;
+            int _positiveCount = 0;
             for (int i = 0; i < Number.Length; i++)
             {
                 if ((Number[i] >= 48 && Number[i] <= 57))
@@ -35,14 +37,30 @@ namespace StringToInteger
                         _minusCount++;
                     else
                         throw new FormatException("Input string is not in the right format");
-
+                }
+                else if(_rangeCount==0 && Number[i]=='+')
+                {
+                    _positiveCount++;
+                    if(_positiveCount>1)
+                    {
+                        throw new FormatException("Input string is not in the right format");
+                    }
                 }
                 else if (_rangeCount>0)
                 {
-                    if (Number[i] == '-')
-                        throw new FormatException("Input string is not in the right format");
-                    else
+                    if (Number[i] == '.')
+                    {
+                        for(int j=i+1;j<Number.Length;j++)
+                        {
+                            if(Number[j]=='.')
+                            {
+                                throw new FormatException("Input string is not in the right format");
+                            }
+                        }
                         break;
+                    }
+                    else
+                       throw new FormatException("Input string is not in the right format");
                 }
             }
             _answer = _minusCount == 1 ? (_answer * -1) : _answer;
