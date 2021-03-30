@@ -43,52 +43,40 @@ namespace ChoosingNumbers
             int _count = 0;
             int sum1 = 0;
             int sum2 = 0;
-            while (P1S<P1L)
+            int Fp = P1S;
+            int Lp = P1L;
+            while (Fp<Lp)
             {
-                sum1 += array[P1S];
-                sum2 += array[P1L];
-                P1S++;
-                P1L--;
+                sum1 += array[Fp];
+                sum2 += array[Lp];
+                Fp++;
+                Lp--;
             }
             if(sum1>sum2)
             {
                 while(P1S < P1L)
                 {
-                    player1.Add(array[P1S]);
+                    Console.WriteLine("Player 1 :"+P1S);
+                    player1.Add(array[P1S]); 
+                    Console.WriteLine("Player 2 :" + P1L);
                     player2.Add(array[P1L]);
                     P1S++;
                     P1L--;
                 }
                 Console.WriteLine("Player 1 Won"); 
-                foreach (var item in player1)
-                {
-                    Console.WriteLine(item);
-                }
-                Console.WriteLine();
-                foreach (var item in player2)
-                {
-                    Console.WriteLine(item);
-                }
             }
             else if (sum1 > sum2)
             {
                 while (P1S < P1L)
                 {
-                    player2.Add(array[P1S]);
+                    Console.WriteLine("Player 1 :" + P1L);
                     player1.Add(array[P1L]);
+                    Console.WriteLine("Player 2 :" + P1S);
+                    player2.Add(array[P1S]);
                     P1S++;
                     P1L--;
                 }
                 Console.WriteLine("Player 1 Won");
-                foreach (var item in player1)
-                {
-                    Console.WriteLine(item);
-                }
-                Console.WriteLine();
-                foreach (var item in player2)
-                {
-                    Console.WriteLine(item);
-                }
             }
             else
             {
