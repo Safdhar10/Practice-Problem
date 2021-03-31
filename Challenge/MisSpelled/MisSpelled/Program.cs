@@ -70,20 +70,24 @@ namespace MisSpelled
                             //    }
                             //}
                         }
-                        if(_getmovie.Length==IndexWithChar.Count)
+                          }
+                    if (_getmovie.Length == IndexWithChar.Count)
+                    {
+                        Console.WriteLine(_getmovie);
+                        Console.WriteLine("You want to search more");
+                        Console.WriteLine("YES      ||      NO");
+                        if (Console.ReadLine().ToUpper() == "YES")
                         {
-                            Console.WriteLine(_getmovie);
-                            Console.WriteLine("You want to search more");
-                            if(Console.ReadLine().ToUpper()=="YES")
-                            {
-                                SearchMovie(Console.ReadLine().ToUpper());
-                            }
-                            else
-                            {
-                                return;
-                            }
+                            Console.Clear();
+                            SearchMovie(Console.ReadLine().ToUpper());
+                            return;
+                        }
+                        else
+                        {
+                            return;
                         }
                     }
+
                 }
             }
             Console.WriteLine("No Word is Found Please Enter Correct Spell");
