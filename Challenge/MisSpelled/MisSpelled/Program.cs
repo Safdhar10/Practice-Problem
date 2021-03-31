@@ -11,9 +11,9 @@ namespace MisSpelled
     {
         static void Main(string[] args)
         {
-            SearchMovie(Console.ReadLine().ToUpper());
+            Search(Console.ReadLine().ToUpper());
         }
-        public static void SearchMovie(string input)
+        public static void Search(string input)
         {
             List<string> MovieNames = new List<string>();
             Dictionary<int,char> IndexWithChar = new Dictionary<int, char>();
@@ -79,7 +79,7 @@ namespace MisSpelled
                         if (Console.ReadLine().ToUpper() == "YES")
                         {
                             Console.Clear();
-                            SearchMovie(Console.ReadLine().ToUpper());
+                            Search(Console.ReadLine().ToUpper());
                             return;
                         }
                         else
@@ -91,8 +91,7 @@ namespace MisSpelled
                 }
             }
             Console.WriteLine("No Word is Found Please Enter Correct Spell");
-            SearchMovie(Console.ReadLine().ToUpper());
-
+            Search(Console.ReadLine().ToUpper());
         }
     }
 }
