@@ -11,7 +11,7 @@ namespace MisSpelled
     {
         static void Main(string[] args)
         {
-            SearchMovie(Console.ReadLine());
+            SearchMovie(Console.ReadLine().ToUpper());
         }
         public static void SearchMovie(string input)
         {
@@ -21,7 +21,7 @@ namespace MisSpelled
             int count = File.ReadAllLines(@"C:\Users\Saffu\Documents/movie.txt").Count();
             while (count-- > 0)
             {
-                MovieNames.Add(setin.ReadLine());
+                MovieNames.Add(setin.ReadLine().ToUpper());
             }
             for(int i=0;i<MovieNames.Count;i++)
             {
@@ -73,11 +73,21 @@ namespace MisSpelled
                         if(_getmovie.Length==IndexWithChar.Count)
                         {
                             Console.WriteLine(_getmovie);
-                            return ;
+                            Console.WriteLine("You want to search more");
+                            if(Console.ReadLine().ToUpper()=="YES")
+                            {
+                                SearchMovie(Console.ReadLine().ToUpper());
+                            }
+                            else
+                            {
+                                return;
+                            }
                         }
                     }
                 }
             }
+            Console.WriteLine("No Word is Found Please Enter Correct Spell");
+            SearchMovie(Console.ReadLine().ToUpper());
 
         }
     }
