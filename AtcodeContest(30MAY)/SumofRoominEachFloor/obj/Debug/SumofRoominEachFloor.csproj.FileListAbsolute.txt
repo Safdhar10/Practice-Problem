@@ -1,0 +1,6 @@
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\SumofRoominEachFloor\bin\Debug\SumofRoominEachFloor.exe.config
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\SumofRoominEachFloor\bin\Debug\SumofRoominEachFloor.exe
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\SumofRoominEachFloor\bin\Debug\SumofRoominEachFloor.pdb
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\SumofRoominEachFloor\obj\Debug\SumofRoominEachFloor.csprojAssemblyReference.cache
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\SumofRoominEachFloor\obj\Debug\SumofRoominEachFloor.exe
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\SumofRoominEachFloor\obj\Debug\SumofRoominEachFloor.pdb

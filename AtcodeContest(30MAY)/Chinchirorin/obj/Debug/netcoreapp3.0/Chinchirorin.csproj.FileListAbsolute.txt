@@ -1,0 +1,11 @@
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\Chinchirorin\bin\Debug\netcoreapp3.0\Chinchirorin.exe
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\Chinchirorin\bin\Debug\netcoreapp3.0\Chinchirorin.deps.json
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\Chinchirorin\bin\Debug\netcoreapp3.0\Chinchirorin.runtimeconfig.json
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\Chinchirorin\bin\Debug\netcoreapp3.0\Chinchirorin.runtimeconfig.dev.json
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\Chinchirorin\bin\Debug\netcoreapp3.0\Chinchirorin.dll
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\Chinchirorin\bin\Debug\netcoreapp3.0\Chinchirorin.pdb
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\Chinchirorin\obj\Debug\netcoreapp3.0\Chinchirorin.csprojAssemblyReference.cache
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\Chinchirorin\obj\Debug\netcoreapp3.0\Chinchirorin.AssemblyInfoInputs.cache
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\Chinchirorin\obj\Debug\netcoreapp3.0\Chinchirorin.AssemblyInfo.cs
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\Chinchirorin\obj\Debug\netcoreapp3.0\Chinchirorin.dll
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\Chinchirorin\obj\Debug\netcoreapp3.0\Chinchirorin.pdb

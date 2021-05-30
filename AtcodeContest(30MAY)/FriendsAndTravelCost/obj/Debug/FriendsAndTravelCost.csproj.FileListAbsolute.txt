@@ -1,0 +1,6 @@
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\FriendsAndTravelCost\bin\Debug\FriendsAndTravelCost.exe.config
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\FriendsAndTravelCost\bin\Debug\FriendsAndTravelCost.exe
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\FriendsAndTravelCost\bin\Debug\FriendsAndTravelCost.pdb
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\FriendsAndTravelCost\obj\Debug\FriendsAndTravelCost.csprojAssemblyReference.cache
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\FriendsAndTravelCost\obj\Debug\FriendsAndTravelCost.exe
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\FriendsAndTravelCost\obj\Debug\FriendsAndTravelCost.pdb

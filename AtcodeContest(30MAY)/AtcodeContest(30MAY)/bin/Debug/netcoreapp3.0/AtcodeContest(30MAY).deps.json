@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "AtcodeContest(30MAY)/1.0.0": {
+        "runtime": {
+          "AtcodeContest(30MAY).dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AtcodeContest(30MAY)/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,11 @@
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\AtcodeContest(30MAY)\bin\Debug\netcoreapp3.0\AtcodeContest(30MAY).exe
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\AtcodeContest(30MAY)\bin\Debug\netcoreapp3.0\AtcodeContest(30MAY).deps.json
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\AtcodeContest(30MAY)\bin\Debug\netcoreapp3.0\AtcodeContest(30MAY).runtimeconfig.json
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\AtcodeContest(30MAY)\bin\Debug\netcoreapp3.0\AtcodeContest(30MAY).runtimeconfig.dev.json
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\AtcodeContest(30MAY)\bin\Debug\netcoreapp3.0\AtcodeContest(30MAY).dll
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\AtcodeContest(30MAY)\bin\Debug\netcoreapp3.0\AtcodeContest(30MAY).pdb
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\AtcodeContest(30MAY)\obj\Debug\netcoreapp3.0\AtcodeContest(30MAY).csprojAssemblyReference.cache
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\AtcodeContest(30MAY)\obj\Debug\netcoreapp3.0\AtcodeContest(30MAY).AssemblyInfoInputs.cache
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\AtcodeContest(30MAY)\obj\Debug\netcoreapp3.0\AtcodeContest(30MAY).AssemblyInfo.cs
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\AtcodeContest(30MAY)\obj\Debug\netcoreapp3.0\AtcodeContest(30MAY).dll
+C:\Users\exams\source\repos\AtcodeContest(30MAY)\AtcodeContest(30MAY)\obj\Debug\netcoreapp3.0\AtcodeContest(30MAY).pdb
